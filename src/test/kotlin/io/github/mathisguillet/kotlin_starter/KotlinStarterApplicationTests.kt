@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest
 class KotlinStarterApplicationTests {
 
 	@Test
-	fun contextLoads() {
+	fun `context loads`() {
 	}
 
 }
