@@ -33,3 +33,10 @@ jobs:
 
       - name: Build docker image
         run: ./gradlew jibBuildTar # Use jib command instead if you define a registry
+
+      - name: Upload test report
+        uses: dorny/test-reporter@v1
+        with:
+          name: JUnit Tests
+          path: build/test-results/**/*.xml
+          reporter: java-junit

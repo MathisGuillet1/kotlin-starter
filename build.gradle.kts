@@ -7,6 +7,7 @@ plugins {
     id("com.google.cloud.tools.jib") version "3.4.3"
     kotlin("jvm") version "2.0.0"
     kotlin("plugin.spring") version "2.0.0"
+    jacoco
 }
 
 group = "io.github.mathisguillet"
@@ -46,5 +47,16 @@ jib {
     }
     to {
         image = "kotlin-starter"
+    }
+}
+
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required = true
     }
 }
