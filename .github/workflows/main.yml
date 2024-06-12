@@ -30,3 +30,6 @@ jobs:
 
       - name: Gradle run tests
         run: ./gradlew test --build-cache
+
+      - name: Build docker image
+        run: ./gradlew jibBuildTar # Use jib command instead if you define a registry

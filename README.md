@@ -22,3 +22,9 @@ To launch application, you can run:
 ```shell
 ./gradlew bootRun
 ```
+
+You can build a docker image locally (or push to a registry) with jib:
+
+```shell
+./gradlew jibDockerBuild
+```
