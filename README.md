@@ -8,3 +8,17 @@ The code style follows the [Kotlin official code conventions](https://kotlinlang
 are enforced by plugin [Klint](https://pinterest.github.io/ktlint/latest/).
 
 You can configure your IDE as described in the official coding conventions to enforce the rules when coding.
+
+## Build the project
+
+To build the project, you can run:
+
+```shell
+./gradlew build
+```
+
+To launch application, you can run:
+
+```shell
+./gradlew bootRun
+```
