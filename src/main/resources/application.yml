@@ -1,3 +1,6 @@
 spring:
   application:
     name: kotlin-starter
+  threads:
+    virtual:
+      enabled: true
