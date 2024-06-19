@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="KotlinStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
     <option name="ACTIVE_PROFILES" value="dev" />
-    <module name="kotlin-starter.main" />
+    <module name="kotlin-starter.modules.application.main" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.mathisguillet.kotlin.starter.KotlinStarterApplication" />
     <method v="2">
       <option name="Make" enabled="true" />

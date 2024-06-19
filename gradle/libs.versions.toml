@@ -1,0 +1,17 @@
+[versions]
+kotlin-version = "2.0.0"
+spring-boot-version = "3.3.0"
+klint-version = "12.1.1"
+jib-version = "3.4.3"
+kotlin-logging-version = "7.0.0"
+
+[libraries]
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-version" }
+kotlin-spring-plugin = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin-version" }
+spring-boot-plugin = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "spring-boot-version" }
+klint-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "klint-version" }
+spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot-version" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging-version" }
+
+[plugins]
+jib = { id = "com.google.cloud.tools.jib", version.ref = "jib-version" }
