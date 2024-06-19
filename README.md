@@ -31,10 +31,12 @@ You can build a docker image locally (or push to a registry) with jib:
 
 ## Structure
 
+Version management is handled in [gradle version catalog](gradle/libs.versions.toml).
+
 Two gradle convention plugins are defined in the `buildSrc` folder to share versions, repositories, configurations...
 across all the submodules.
 
-In any submodule you can refer to the convention plugin to inherit all configurations related to kotlin or spring and
+In any submodule you can add the convention plugin to inherit all configurations related to kotlin or spring and
 kotlin.
 
 ```
