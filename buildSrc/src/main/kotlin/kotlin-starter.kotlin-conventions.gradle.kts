@@ -14,18 +14,9 @@ repositories {
 }
 
 dependencies {
-    val versionCatalog = rootProject.extensions.getByType<VersionCatalogsExtension>().named("libs")
-
-    // Dependencies shared across all modules
-    implementation(platform(versionCatalog.findLibrary("spring-boot-dependencies").get()))
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-    // Dependencies versioning for modules
-    constraints {
-        implementation(versionCatalog.findLibrary("kotlin-logging").get())
-    }
 }
 
 kotlin {
