@@ -1,6 +1,6 @@
 # Kotlin starter
 
-This project provides a template to bootstrap projects built with Spring Boot and Kotlin.
+This project provides a template to bootstrap projects built with Spring Boot and Kotlin with multi module structure.
 
 ## Code style
 

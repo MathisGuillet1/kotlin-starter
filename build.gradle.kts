@@ -1,20 +1,10 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
+    id("kotlin-starter.conventions")
     id("org.springframework.boot") version "3.3.0"
     id("io.spring.dependency-management") version "1.1.5"
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
     id("com.google.cloud.tools.jib") version "3.4.3"
-    kotlin("jvm") version "2.0.0"
     kotlin("plugin.spring") version "2.0.0"
-    jacoco
-}
-
-group = "io.github.mathisguillet"
-version = "0.0.1-SNAPSHOT"
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
@@ -30,33 +20,11 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-kotlin {
-    compilerOptions {
-        freeCompilerArgs.addAll("-Xjsr305=strict")
-        jvmTarget = JvmTarget.JVM_21
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
 jib {
     from {
         image = "eclipse-temurin:21-jre"
     }
     to {
         image = "kotlin-starter"
-    }
-}
-
-tasks.test {
-    finalizedBy(tasks.jacocoTestReport)
-}
-
-tasks.jacocoTestReport {
-    dependsOn(tasks.test)
-    reports {
-        xml.required = true
     }
 }
