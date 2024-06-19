@@ -1,5 +1,6 @@
 rootProject.name = "kotlin-starter"
 
 include(
-    "modules:application"
+    "modules:application",
+    "modules:library"
 )

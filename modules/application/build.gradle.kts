@@ -4,6 +4,8 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":modules:library"))
+
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("io.github.oshai:kotlin-logging-jvm")
