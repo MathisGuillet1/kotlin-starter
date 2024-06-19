@@ -1,5 +1,17 @@
 [versions]
-kotlin-gradle-plugin = "2.0.0"
+kotlin-version = "2.0.0"
+spring-boot-version = "3.3.0"
+jib-version = "3.4.3"
+klint-version = "12.1.1"
+kotlin-logging-version = "7.0.0"
 
 [libraries]
-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-gradle-plugin" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-version" }
+spring-boot-dependencies = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "spring-boot-version" }
+klint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "klint-version" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging-version" }
+
+[plugins]
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin-version" }
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot-version" }
+jib = { id = "com.google.cloud.tools.jib", version.ref = "jib-version" }
