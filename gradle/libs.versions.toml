@@ -1,6 +1,6 @@
 [versions]
 kotlin-version = "2.0.21"
-spring-boot-version = "3.3.6"
+spring-boot-version = "3.4.0"
 klint-version = "12.1.1"
 jib-version = "3.4.4"
 kotlin-logging-version = "7.0.0"
