@@ -3,7 +3,7 @@ kotlin-version = "2.2.10"
 spring-boot-version = "3.5.4"
 klint-version = "12.1.1"
 jib-version = "3.4.5"
-kotlin-logging-version = "7.0.12"
+kotlin-logging-version = "7.0.13"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin-version" }
