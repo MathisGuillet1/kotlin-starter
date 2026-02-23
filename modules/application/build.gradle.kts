@@ -13,7 +13,7 @@ dependencies {
 
 jib {
     from {
-        image = "eclipse-temurin:21-jre-alpine"
+        image = "eclipse-temurin:25-jre-alpine"
     }
     to {
         image = "kotlin-starter"
